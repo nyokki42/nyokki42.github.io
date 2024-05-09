@@ -1,26 +1,60 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="jp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>weather</title>
+    <title>記録簿</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 追加のCSSスタイル */
+        #todo-list {
+            margin-top: 20px;
+        }
+        #todo-list li {
+            list-style-type: none;
+            margin-bottom: 10px;
+        }
+        .delete-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>前田へようこそ</h1>
+        <h1>記録簿（仮）</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
+    
+    <section id="main-content">
+        <h2>ー５月ー</h2>
+        <a href="md-0508.html">8日</a>
+        
+        <!-- ToDoリスト -->
+        <h3>ToDoリスト</h3>
+        <input type="text" id="taskInput" placeholder="新しいタスクを追加">
+        <input type="date" id="deadlineInput" placeholder="期限を追加">
+        <button onclick="addTask()">追加</button>
+        <ul id="todo-list">
+            <!-- JavaScriptで追加されるToDoタスクがここに表示されます -->
         </ul>
-    </nav>
-    <section>
-        <h2>About Me</h2>
-        <p>This is a simple homepage created using HTML and CSS.</p>
     </section>
+    
     <footer>
-        <p>&copy; 2024 made by Maeda Hiroki</p>
+        <p>&copy; 2024 This website made by Maeda . All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
